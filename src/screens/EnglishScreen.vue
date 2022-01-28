@@ -1,12 +1,14 @@
 <template>
   <div class="english-screen">
-        
+      <Card />
   </div>
 </template>
 
 <script>
+import Card from '@/components/Card'
 export default {
-    name: 'English Screen'
+    name: 'English Screen',
+    components: { Card }
 }
 </script>
 
