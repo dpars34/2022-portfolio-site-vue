@@ -31,8 +31,8 @@ export default {
 }
 
 .header-text {
-    color: white;
-    font-size: 7.2rem;
+    color: #e1e1e1;
+    font-size: 6rem;
     font-family: 'Cabin', sans-serif;
     padding-left: 2rem;
     margin: 0;

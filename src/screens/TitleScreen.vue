@@ -11,7 +11,7 @@
                     <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
             </div>
-            <button class="contact-button">Contact</button>
+            <Button text="Contact" class="contact-button" />
             <div class="japanese-button">
                 <p class="japanese-language-label">日本語</p>
                 <svg style="width:30px;height:30px" viewBox="0 0 24 24">
@@ -24,8 +24,11 @@
 </template>
 
 <script>
+import Button from '@/components/Button'
+
 export default {
-    name: "TitleScreen"
+    name: "TitleScreen",
+    components: { Button }
 }
 </script>
 
@@ -86,13 +89,7 @@ export default {
 }
 
 .contact-button {
-    all: unset;
     margin: 3rem;
-    padding: 0.5em 1.5em;
-    color: #FFFFFF;
-    background-color: #DB9205;
-    border-radius: 10px;
-    font-size: 3rem;
 }
 
 .english-button {

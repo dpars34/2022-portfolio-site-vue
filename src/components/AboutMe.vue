@@ -31,7 +31,7 @@ export default {
 }
 .about-me__text {
     font-size: 1.6rem;
-    color: white;
+    color: #e1e1e1;
 }
 
 </style>

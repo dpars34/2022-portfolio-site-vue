@@ -1,32 +1,28 @@
 <template>
   <div class="card">
-      <h3 class="card__title">{{ title }}</h3>
+      <h3 class="card__title">{{ data.name }}</h3>
       <div class="card__image-container">
-        <img class="card__image" :src="image" :alt="imageAlt">
+        <img class="card__image" src="@/assets/project1.png" :alt="data.imageAlt">
       </div>
-      <p class="card__text">{{ text }}</p>
-      <p class="card__date">{{ date }}</p>
+      <p class="card__text">{{ data.text }}</p>
+      <p class="card__date">{{ data.date }}</p>
   </div>
 </template>
 
 <script>
+import image1 from '@/assets/project1.png'
+
 export default {
     name: 'Card',
     props: {
-        title: {
-            type: String
-        },
-        image: {
-            type: String
-        },
-        imageAlt: {
-            type: String
-        },
-        text: {
-            type: String
-        },
-        date: {
-            type: String
+        data: {
+            type: Object,
+            required: true
+        }
+    },
+    data() {
+        return {
+            image1: image1
         }
     }
 }
@@ -34,7 +30,6 @@ export default {
 
 <style scoped>
 .card {
-    width: 40rem;
     border: solid 0.3rem #E1E1E1;
     border-radius: 50px;
     padding: 3.2rem;

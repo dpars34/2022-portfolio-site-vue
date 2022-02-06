@@ -1,19 +1,25 @@
 <template>
   <div>
-    <!-- <TitleScreen /> -->
-    <EnglishScreen />
+    <TitleScreen v-if="titleScreenShowing"/>
+    <EnglishScreen v-if="!titleScreenShowing && isEnglish" />
   </div>
 </template>
 
 <script>
-// import TitleScreen from '@/screens/TitleScreen'
+import TitleScreen from '@/screens/TitleScreen'
 import EnglishScreen from '@/screens/EnglishScreen'
 
 export default {
   name: 'App',
   components: {
-    // TitleScreen,
+    TitleScreen,
     EnglishScreen
+  },
+  data() {
+    return {
+      titleScreenShowing: false,
+      isEnglish: true
+    }
   }
 }
 </script>
