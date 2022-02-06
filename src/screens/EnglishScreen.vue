@@ -1,21 +1,27 @@
 <template>
   <div class="english-screen">
-      <Card />
+      <AboutMe :data="aboutMeData" :isEnglish="true"/>
+      <Line />
   </div>
 </template>
 
 <script>
-import Card from '@/components/Card'
+import data from '@/data.json'
+import AboutMe from '@/components/AboutMe'
+import Line from '@/components/Line'
 export default {
     name: 'English Screen',
-    components: { Card }
+    components: { AboutMe, Line },
+    data() {
+        return {
+            aboutMeData: data.english.aboutMe,
+            projectsData: data.english.projects,
+            contactData: data.english.contact
+        }
+    }
 }
 </script>
 
 <style>
-.english-screen {
-    height: 100vh;
-    width: 100vw;
-    background-color: #232323;
-}
+
 </style>

@@ -1,17 +1,34 @@
 <template>
   <div class="card">
-      <h3 class="card__title">Onkun - The simple kanji dictionary</h3>
+      <h3 class="card__title">{{ title }}</h3>
       <div class="card__image-container">
-        <img class="card__image" src="@/assets/project1.png" alt="Onkun project">
+        <img class="card__image" :src="image" :alt="imageAlt">
       </div>
-      <p class="card__text">OnKun is the simple kanji dictionary. It aims to display kanji readings in a simple and clear way, with on-yomi readings on the left in black, and kun-yomi readings on the right in red.</p>
-      <p class="card__date">May 2021</p>
+      <p class="card__text">{{ text }}</p>
+      <p class="card__date">{{ date }}</p>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Card'
+    name: 'Card',
+    props: {
+        title: {
+            type: String
+        },
+        image: {
+            type: String
+        },
+        imageAlt: {
+            type: String
+        },
+        text: {
+            type: String
+        },
+        date: {
+            type: String
+        }
+    }
 }
 </script>
 

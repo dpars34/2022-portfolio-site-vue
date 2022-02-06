@@ -1,0 +1,92 @@
+{
+    "english": {
+        "aboutMe": {
+            "title": "About Me",
+            "text": [
+                "As far back as I can remember, I have had the unwavering desire to create. From the age of seven I was writing my own songs on the guitar, and by fifteen I was writing my first piano pieces. It was this desire to create that eventually led me to music college where I graduated with a degree in music composition.",
+                
+                "After graduating, I decided that I needed a change, so I packed my bags and moved to Japan to teach English. It was in Japan that I was first introduced to the world of programming, when one of my friends showed me a language learning tool that she was working on. I was instantly captivated, amazed by the endless possibilities that programming and web design were able to offer.", 
+                
+                "Since then I have been working on various different projects with a focus on Javascript, React and HTML/CSS.",
+
+                "My arts background has given me a unique perspective on programming and web design. No matter whether it is a musical composition or a web page, all creative endeavours should be beautiful, balanced and unique.",
+
+                "I currently live in Osaka, Japan. I am a fluent Japanese speaker having achieved the JLPT N1 grade. Scroll down to see some of the projects I have been working on."
+            ]
+        },
+
+        "projects":  {
+            "title": "Projects",
+            "Projects": [
+                {
+                    "name": "Onkun - The simple kanji dictionary",
+                    "image": "@/assets/project1.png",
+                    "imageAlt": "Onkun kanji dictionary homepage",
+                    "text": "OnKun is the simple kanji dictionary. It aims to display kanji readings in a simple and clear way, with on-yomi readings on the left in black, and kun-yomi readings on the right in red.",
+                    "date": "May 2021"
+                },
+
+                {
+                    "name": "Navi Jisho - The easy to navigate Japanese dictionary",
+                    "image": "@/assets/project1.png",
+                    "imageAlt": "Navi jisho dictionary homepage",
+                    "text": "Navi Jisho is the easy to navigate Japanese dictionary, inspired by the layout and design of the Tokyo and Osaka metro systems.",
+                    "date": "November 2021"
+                }
+            ]
+        },
+
+        "contact": {
+            "title": "Contact",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "send": "Send"
+        }
+    },
+
+    "japanese": {
+        "aboutMe": {
+            "title": "About Me",
+            "text": [
+                "子供の頃からいつも何かを作る衝動に駆られていました。７歳の頃に初めてギターで作曲をし、15歳の頃にはクラシック音楽の虜になりピアノの曲を作り始めました。常に何かを作りたいという気持ちから大学はイギリスの音楽大学に進学し、2018年に卒業しました。",
+                
+                "大学卒業後すぐに「何か変化が欲しい」と思うようになり、荷物をまとめて日本に引っ越してきました。日本で初めてプログラミングに出会い、その無限大の可能性に今でも魅了されています。そこからJavascript, React, HTML/CSSを使いながら様々なプロジェクトに取り組んでいます。", 
+                
+                "プログラミングにおいても長年の音楽との生活を通して学んだ芸術的感覚が生かされています。作曲、ウェブサイトに関わらず何かを創るときに必要なのはバランス・ユニークさ・美しさだと信じています。",
+
+                "現在は大阪に住みながら英語を教える仕事をしています。子供の頃から母と日本語で話していたこともあり、バイリンガルとして毎日日本語を使う環境に身を置きながら仕事をしています。JLPT N1は2020年12月に取得しました。"
+            ]
+        },
+
+        "projects":  {
+            "title": "Projects",
+            "Projects": [
+                {
+                    "name": "OnKun - 外国人向きの漢字辞典",
+                    "image": "@/assets/project1.png",
+                    "imageAlt": "Onkunホームページ",
+                    "text": "Onkunは外国人向きのシンプルな漢字辞典です。読み方を簡単に理解できるため、音読みは左側の黒い箱、訓読みは右側の赤い箱、わかりやすく分かれています。",
+                    "date": "2021年5月"
+                },
+
+                {
+                    "name": "Navi Jisho - 簡単にナビゲートできる日本語辞典",
+                    "image": "@/assets/project1.png",
+                    "imageAlt": "Navi jishoホームページ",
+                    "text": "東京と大阪の地下鉄からインスピレーションをとったNavi Jisho - 誰でも簡単にビゲートできる日本語辞典。",
+                    "date": "2021年11月"
+                }
+            ]
+        },
+
+        "contact": {
+            "title": "Contact",
+            "name": "お名前",
+            "email": "メールアドレス",
+            "message": "お問い合わせ内容",
+            "send": "送信"
+        }
+
+    }
+}

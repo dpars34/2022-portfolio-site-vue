@@ -22,6 +22,10 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=M+PLUS+1p&family=Quantico&display=swap');
 
+html {
+  background-color: #232323;
+}
+
 #app {
   font-family: 'Quantico', 'M PLUS 1p', 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;

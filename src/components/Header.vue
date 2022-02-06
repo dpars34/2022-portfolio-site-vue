@@ -35,5 +35,6 @@ export default {
     font-size: 7.2rem;
     font-family: 'Cabin', sans-serif;
     padding-left: 2rem;
+    margin: 0;
 }
 </style>
