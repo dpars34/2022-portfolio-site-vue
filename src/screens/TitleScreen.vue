@@ -90,6 +90,7 @@ export default {
 
 .contact-button {
     margin: 3rem;
+    font-size: 3rem;
 }
 
 .english-button {

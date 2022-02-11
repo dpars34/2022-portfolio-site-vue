@@ -1,11 +1,9 @@
 <template>
   <div class="projects">
-      <Header :text="data.title"/>
-      <div class="projects__cards-container" v-for="(project, index) in data.projects" :key="index">
-          <div class="projects__card">
-            <Card :data="project" />
-          </div>
-      </div>
+      <Header :text="data.title" :isEnglish="isEnglish"/>
+        <div class="projects__card" v-for="(project, index) in data.projects" :key="index">
+            <Card :data="project" :isEnglish="isEnglish"/>
+        </div>
   </div>
 </template>
 
@@ -31,10 +29,14 @@ export default {
 
 <style>
 .projects {
-    padding: 1.6rem;
+    padding: 3.2rem 1.6rem;
 }
 
 .projects__card {
     margin: 4.8rem 0;
+}
+
+.projects__card:last-child {
+    margin: 0;
 }
 </style>

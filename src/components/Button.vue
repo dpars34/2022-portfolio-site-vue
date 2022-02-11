@@ -23,6 +23,5 @@ export default {
     color: #FFFFFF;
     background-color: #DB9205;
     border-radius: 10px;
-    font-size: 3rem;
 }
 </style>

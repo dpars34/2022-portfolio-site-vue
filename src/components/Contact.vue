@@ -1,22 +1,22 @@
 <template>
   <div class="contact">
-      <Header :text="data.title"/>
+      <Header :text="data.title" :isEnglish="isEnglish"/>
       <div class="contact__form-container">
-          <form :action="sendMessage">
+          <form ref="form" @submit.prevent="sendEmail">
               <div class="contact__form-group">
-                  <label class="contact__label" for="name">{{ data.name }}</label>
-                  <input class="contact__input" name="name" type="text" autocomplete="off" required>
+                  <label class="contact__label" :class="{ 'contact__japanese-text': !isEnglish }" for="user_nam">{{ data.name }}</label>
+                  <input class="contact__input" :class="{ 'contact__japanese-input': !isEnglish }" name="user_name" type="text" autocomplete="off" required>
               </div>
               <div class="contact__form-group">
-                  <label class="contact__label" for="email">{{ data.email }}</label>
-                  <input class="contact__input" name="email" type="text" autocomplete="off" required>
+                  <label class="contact__label" :class="{ 'contact__japanese-text': !isEnglish }" for="user_email">{{ data.email }}</label>
+                  <input class="contact__input" :class="{ 'contact__japanese-input': !isEnglish }" name="user_email" type="text" autocomplete="off" required>
               </div>
               <div class="contact__form-group">
-                  <label class="contact__label" for="message">{{ data.message }}</label>
-                  <textarea class="contact__textarea" name="message" type="text" autocomplete="off" required></textarea>
+                  <label class="contact__label" :class="{ 'contact__japanese-text': !isEnglish }" for="message">{{ data.message }}</label>
+                  <textarea class="contact__textarea" :class="{ 'contact__japanese-input': !isEnglish }" name="message" type="text" autocomplete="off" required></textarea>
               </div>
               <div class="contact__button-container">
-                <Button class="contact__button" :text="data.send"/>
+                  <input class="contact__button" type="submit" :value="data.send">
               </div>
           </form>
       </div>
@@ -25,7 +25,7 @@
 
 <script>
 import Header from '@/components/Header'
-import Button from '@/components/Button'
+import emailjs from '@emailjs/browser'
 export default {
     name: 'Contact',
     props: {
@@ -38,13 +38,25 @@ export default {
             default: true
         }
     },
-    components: { Header, Button }
+    components: { Header },
+    methods: {
+        sendEmail() {
+            emailjs.sendForm("service_oecmsbq", "template_bjgamid", this.$refs.form, "user_9EtEh0xOJ964JtXdN23UQ")
+            .then((result) => {
+                console.log(result.text)
+                alert("Message sent successfully!")
+            }, (error) => {
+                console.log(error.text)
+                alert("Message could not be sent! "+error);
+            })
+        }
+    }
 }
 </script>
 
 <style>
 .contact {
-    padding: 1.6rem;
+    padding: 3.2rem 1.6rem;
 }
 .contact__form-group {
     display: flex;
@@ -59,7 +71,7 @@ export default {
 .contact__input {
     padding: 0.8rem;
     background-color: #232323;
-    border: solid 0.3rem #e1e1e1;
+    border: solid 0.1rem #e1e1e1;
     border-radius: 10px;
     color: #e1e1e1;
     font: inherit;
@@ -70,7 +82,7 @@ export default {
     height: 10rem;
     resize: none;
     background-color: #232323;
-    border: solid 0.3rem #e1e1e1;
+    border: solid 0.1rem #e1e1e1;
     border-radius: 10px;
     color: #e1e1e1;
     font: inherit;
@@ -83,5 +95,23 @@ export default {
     justify-content: center;
     padding-top: 0.8rem;
     font-family: 'Cabin', sans-serif;
+    font-size: 2.5rem;
+}
+
+.contact__button {
+    all: unset;
+    padding: 0.1em 1.5em;
+    color: #FFFFFF;
+    background-color: #DB9205;
+    border-radius: 10px;
+}
+
+.contact__japanese-text {
+    color: #232323;
+}
+
+.contact__japanese-input {
+    background-color: #F9F9F9;
+    border: solid 0.1rem #e1e1e1;
 }
 </style>
