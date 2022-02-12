@@ -20,8 +20,8 @@ export default {
   },
   data() {
     return {
-      titleScreenShowing: false,
-      isEnglish: false
+      titleScreenShowing: true,
+      isEnglish: true
     }
   }
 }

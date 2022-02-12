@@ -20,18 +20,29 @@
             "projects": [
                 {
                     "name": "Onkun - The simple kanji dictionary",
-                    "image": "@/assets/project1.png",
+                    "image": "https://i.postimg.cc/MHj3879Z/onkun-screengrab.jpg",
                     "imageAlt": "Onkun kanji dictionary homepage",
                     "text": "OnKun is the simple kanji dictionary. It aims to display kanji readings in a simple and clear way, with on-yomi readings on the left in black, and kun-yomi readings on the right in red.",
-                    "date": "May 2021"
+                    "date": "May 2021",
+                    "link": "https://www.onkun.org/"
+                },
+
+                {
+                    "name": "9 Borden Coffee - Coffee Shop Website",
+                    "image": "https://i.postimg.cc/tTcvfStm/9borden-screengrab.jpg",
+                    "imageAlt": "9 borden coffee homepage",
+                    "text": "A website created for 9 Borden Coffee, a coffee shop located in Osaka, Japan.",
+                    "date": "June 2021",
+                    "link": "https://9bordencoffee.com/"
                 },
 
                 {
                     "name": "Navi Jisho - The easy to navigate Japanese dictionary",
-                    "image": "@/assets/project1.png",
+                    "image": "https://i.postimg.cc/V5QGsJhq/navijisho-screengrab.jpg",
                     "imageAlt": "Navi jisho dictionary homepage",
                     "text": "Navi Jisho is the easy to navigate Japanese dictionary, inspired by the layout and design of the Tokyo and Osaka metro systems.",
-                    "date": "November 2021"
+                    "date": "November 2021",
+                    "link": "https://www.navijisho.org/"
                 }
             ]
         },
@@ -64,18 +75,29 @@
             "projects": [
                 {
                     "name": "OnKun - 外国人向きの漢字辞典",
-                    "image": "@/assets/project1.png",
+                    "image": "https://i.postimg.cc/MHj3879Z/onkun-screengrab.jpg",
                     "imageAlt": "Onkunホームページ",
                     "text": "Onkunは外国人向きのシンプルな漢字辞典です。読み方を簡単に理解できるため、音読みは左側の黒い箱、訓読みは右側の赤い箱、わかりやすく分かれています。",
-                    "date": "2021年5月"
+                    "date": "2021年5月",
+                    "link": "https://www.onkun.org/"
+                },
+
+                {
+                    "name": "9 Borden Coffee - ホームページ",
+                    "image": "https://i.postimg.cc/tTcvfStm/9borden-screengrab.jpg",
+                    "imageAlt": "9bordenホームページ",
+                    "text": "大阪にあるカフェ、9 Borden Borden Coffeeのホームページです。",
+                    "date": "2021年6月",
+                    "link": "https://9bordencoffee.com/"
                 },
 
                 {
                     "name": "Navi Jisho - 簡単にナビゲートできる日本語辞典",
-                    "image": "@/assets/project1.png",
+                    "image": "https://i.postimg.cc/V5QGsJhq/navijisho-screengrab.jpg",
                     "imageAlt": "Navi jishoホームページ",
                     "text": "東京と大阪の地下鉄からインスピレーションをとったNavi Jisho - 誰でも簡単にビゲートできる日本語辞典。",
-                    "date": "2021年11月"
+                    "date": "2021年11月",
+                    "link": "https://www.navijisho.org/"
                 }
             ]
         },

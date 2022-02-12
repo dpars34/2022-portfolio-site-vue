@@ -1,12 +1,12 @@
 <template>
-  <div class="card" :class="{ 'card__japanese' : !isEnglish }">
-      <h3 class="card__title" :class="{ 'card__japanese-text' : !isEnglish }">{{ data.name }}</h3>
-      <div class="card__image-container">
-        <img class="card__image" src="@/assets/project1.png" :alt="data.imageAlt">
-      </div>
-      <p class="card__text" :class="{ 'card__japanese-text' : !isEnglish }">{{ data.text }}</p>
-      <p class="card__date" :class="{ 'card__japanese-text' : !isEnglish }">{{ data.date }}</p>
-  </div>
+    <div class="card" :class="{ 'card__japanese' : !isEnglish }" @click="openLink(data.link)">
+        <h3 class="card__title" :class="{ 'card__japanese-text' : !isEnglish }">{{ data.name }}</h3>
+        <div class="card__image-container">
+            <img class="card__image" :src="data.image" :alt="data.imageAlt">
+        </div>
+        <p class="card__text" :class="{ 'card__japanese-text' : !isEnglish }">{{ data.text }}</p>
+        <p class="card__date" :class="{ 'card__japanese-text' : !isEnglish }">{{ data.date }}</p>
+    </div>
 </template>
 
 <script>
@@ -22,6 +22,11 @@ export default {
             default: true
         }
     },
+    methods: {
+        openLink(url) {
+            window.open(url, '_blank').focus()
+        }
+    }
 }
 </script>
 
@@ -30,6 +35,10 @@ export default {
     border: solid 0.1rem #E1E1E1;
     border-radius: 50px;
     padding: 3.2rem;
+}
+
+.card:hover {
+    cursor: pointer;
 }
 
 .card__title {

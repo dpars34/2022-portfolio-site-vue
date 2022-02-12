@@ -5,6 +5,7 @@
       <Projects :data="projectsData" :isEnglish="false"/>
       <Line />
       <Contact :data="contactData" :isEnglish="false"/>
+      <Footer :isEnglish="false"/>
   </div>
 </template>
 
@@ -14,10 +15,11 @@ import AboutMe from '@/components/AboutMe'
 import Line from '@/components/Line'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
 
 export default {
     name: 'Japanese Screen',
-    components: { AboutMe, Line, Projects, Contact },
+    components: { AboutMe, Line, Projects, Contact, Footer },
     data() {
         return {
             aboutMeData: data.japanese.aboutMe,
