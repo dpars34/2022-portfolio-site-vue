@@ -25,9 +25,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .about-me {
     padding: 3.2rem 1.6rem;
+    max-width: 1440px;
+    margin: auto;
 }
 .about-me__text {
     font-size: 1.6rem;
@@ -37,6 +39,12 @@ export default {
 .about-me__japanese {
     color: #232323;
     line-height: 1.7;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me {
+    padding: 3.2rem 10rem;
+  }
 }
 
 </style>

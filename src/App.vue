@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      titleScreenShowing: true,
+      titleScreenShowing: false,
       isEnglish: true
     }
   }

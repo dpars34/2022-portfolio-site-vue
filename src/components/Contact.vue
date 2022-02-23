@@ -54,9 +54,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .contact {
     padding: 3.2rem 1.6rem;
+    max-width: 1440px;
+    margin: auto;
 }
 .contact__form-group {
     display: flex;
@@ -113,5 +115,11 @@ export default {
 .contact__japanese-input {
     background-color: #F9F9F9;
     border: solid 0.1rem #e1e1e1;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    padding: 3.2rem 10rem;
+  }
 }
 </style>

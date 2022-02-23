@@ -1,8 +1,10 @@
 <template>
   <div class="projects">
       <Header :text="data.title" :isEnglish="isEnglish"/>
-        <div class="projects__card" v-for="(project, index) in data.projects" :key="index">
-            <Card :data="project" :isEnglish="isEnglish"/>
+        <div class="projects__card-container">
+            <div class="projects__card" v-for="(project, index) in data.projects" :key="index">
+                <Card :data="project" :isEnglish="isEnglish"/>
+            </div>
         </div>
   </div>
 </template>
@@ -27,16 +29,37 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .projects {
     padding: 3.2rem 1.6rem;
+    max-width: 1440px;
+    margin: auto;
 }
 
-.projects__card {
-    margin: 4.8rem 0;
-}
+ .projects__card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    margin-top: 1.6rem;
+ }
 
 .projects__card:last-child {
     margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    padding: 3.2rem 10rem;
+  }
+
+  .projects__card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  }
+
+  .projects__card {
+      flex: 1 1 300px;
+      display: flex;
+  }
 }
 </style>

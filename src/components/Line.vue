@@ -20,7 +20,13 @@ export default {
     background-color: #DB9205;
     border: none;
     height: 0.2rem;
-    width: 70vw;
+    width: 30rem;
     margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .line__hr {
+        width: 70vw;
+    }
 }
 </style>

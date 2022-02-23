@@ -31,29 +31,32 @@ export default {
 </script>
 
 <style scoped>
-    .footer {
-        border-top: solid 0.1rem #FFFFFF;
-        padding: 1.6rem;
-        color: #FFFFFF;
-    }
+.footer {
+    border-top: solid 0.1rem #FFFFFF;
+    padding: 1.6rem;
+    color: #FFFFFF;
+    max-width: 1440px;
+    margin: auto;
+}
 
-    .footer__japanese {
-        border-top: solid 0.1rem #232323;
-        color: #232323;
-    }
+.footer__japanese {
+    border-top: solid 0.1rem #232323;
+    color: #232323;
+}
 
-    .footer__logo-container {
-        display: flex;
-        gap: 2.4rem;
-    }
+.footer__logo-container {
+    display: flex;
+    gap: 2.4rem;
+}
 
-    .footer__logo-container > svg {
-        height: 4rem;
-        width: 4rem;
-    }
+.footer__logo-container > svg {
+    height: 4rem;
+    width: 4rem;
+}
 
-    .footer__text-container {
-        font-size: 1.6rem;
-        padding-top: 1.6rem;
-    }
+.footer__text-container {
+    font-size: 1.6rem;
+    padding-top: 1.6rem;
+}
+
 </style>

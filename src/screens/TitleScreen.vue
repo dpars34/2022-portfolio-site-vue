@@ -51,32 +51,29 @@ export default {
 }
 
 .name-title {
-    font-size: 7.2rem;
+    font-size: 5rem;
     padding: 0;
     margin: 0;
 }
 
 .subtitle {
     font-size: 2.4rem;
+    margin: 0;
 }
 
 .daniel-text {
     color: #FFF;
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
 
 .bilingual-text {
     color: #FFF;
-    padding-right: 3rem;
-}
-
-.developer-text {
-    padding-right: 1rem;
+    padding-right: 2rem;
 }
 
 .profile-picture {
-    max-height: 350px;
-    margin-top: 3rem;
+    height: 20rem;
+    margin-top: 5rem;
     border-radius: 50%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -84,13 +81,14 @@ export default {
 .bottom-area {
     display: flex;
     width: 100vw;
+    max-width: 1440px;
+    padding-top: 5rem;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .contact-button {
-    margin: 3rem;
-    font-size: 3rem;
+    display: none;
 }
 
 .english-button {
@@ -119,4 +117,32 @@ export default {
     line-height: 1;
 }
 
+@media screen and (min-width: 768px) {
+    .contact-button {
+        display: block;
+        margin: 3rem;
+        font-size: 4rem;
+    }
+
+    .name-title {
+        font-size: 7.2rem;
+    }
+
+    .subtitle {
+        font-size: 3.2rem;
+    }   
+
+    .profile-picture {
+        height: 35rem;
+    }
+
+    .english-button {
+        font-size: 4rem;
+    }
+
+    .japanese-button {
+        font-size: 4rem;
+    }
+
+}
 </style>
