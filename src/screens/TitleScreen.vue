@@ -1,18 +1,18 @@
 <template>
   <div class="title-screen">
-    <div class="flex-container">
+    <div class="flex-container" :class="{'flex-container-fade-out': textFadeOut}">
         <p class="name-title"><span class="daniel-text">Daniel</span><span class="parsons-text">Parsons</span></p>
         <p class="subtitle"><span class="bilingual-text">Bilingual</span><span class="developer-text">Developer</span></p>
         <img class="profile-picture" src="../assets/profile_image.jpeg" alt="Daniel Parsons profile">
         <div class="bottom-area">
-            <div class="english-button">
+            <div class="english-button" @click="handleClickEnglish">
                 <p class="english-language-label">English</p>
                 <svg style="width:30px;height:30px" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
             </div>
             <Button text="Contact" class="contact-button" />
-            <div class="japanese-button">
+            <div class="japanese-button" @click="handleClickJapanese">
                 <p class="japanese-language-label">日本語</p>
                 <svg style="width:30px;height:30px" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
@@ -28,7 +28,22 @@ import Button from '@/components/Button'
 
 export default {
     name: "TitleScreen",
-    components: { Button }
+    components: { Button },
+    data() {
+        return {
+            textFadeOut: false
+        }
+    },
+    methods: {
+        handleClickEnglish() {
+            this.textFadeOut = true
+            this.$emit('handleClick', 'english')
+        },
+        handleClickJapanese() {
+            this.textFadeOut = true
+            this.$emit('handleClick', 'japanese')
+        }
+    }
 }
 </script>
 
@@ -37,8 +52,10 @@ export default {
 .title-screen{
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(88deg, #232323 49.5%, #E1E1E1 49.6%);
+    background-image: linear-gradient(88deg, #232323 49.8%, #E1E1E1 49.9%);
     font-family: 'Cabin', sans-serif;
+    background-size: 250%;
+    background-position: 50% 50%;
 }
 
 .flex-container{
@@ -48,6 +65,19 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.flex-container-fade-out {
+    animation: fade-out 0.5s forwards;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 .name-title {
@@ -105,6 +135,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.english-button:hover, .japanese-button:hover {
+    cursor: pointer;
 }
 
 .english-language-label {

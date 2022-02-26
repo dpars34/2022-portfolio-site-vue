@@ -3,24 +3,26 @@
       <Header :text="data.title" :isEnglish="isEnglish"/>
       <div class="contact__form-container">
           <form ref="form" @submit.prevent="sendEmail">
-              <div class="contact__form-group">
-                  <label class="contact__label" :class="{ 'contact__japanese-text': !isEnglish }" for="user_nam">{{ data.name }}</label>
-                  <input class="contact__input" :class="{ 'contact__japanese-input': !isEnglish }" name="user_name" type="text" autocomplete="off" required>
-              </div>
-              <div class="contact__form-group">
-                  <label class="contact__label" :class="{ 'contact__japanese-text': !isEnglish }" for="user_email">{{ data.email }}</label>
-                  <input class="contact__input" :class="{ 'contact__japanese-input': !isEnglish }" name="user_email" type="text" autocomplete="off" required>
-              </div>
-              <div class="contact__form-group">
-                  <label class="contact__label" :class="{ 'contact__japanese-text': !isEnglish }" for="message">{{ data.message }}</label>
-                  <textarea class="contact__textarea" :class="{ 'contact__japanese-input': !isEnglish }" name="message" type="text" autocomplete="off" required></textarea>
-              </div>
-              <div class="contact__button-container">
-                  <input class="contact__button" type="submit" :value="data.send">
-              </div>
-          </form>
-      </div>
-  </div>
+                <div class="contact__name-email-container">  
+                    <div class="contact__form-group">
+                        <label class="contact__label" :class="{ 'contact__japanese-text': !isEnglish }" for="user_nam">{{ data.name }}</label>
+                        <input class="contact__input" :class="{ 'contact__japanese-input': !isEnglish }" name="user_name" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="contact__form-group">
+                        <label class="contact__label" :class="{ 'contact__japanese-text': !isEnglish }" for="user_email">{{ data.email }}</label>
+                        <input class="contact__input" :class="{ 'contact__japanese-input': !isEnglish }" name="user_email" type="text" autocomplete="off" required>
+                    </div>
+                </div>
+                <div class="contact__form-group">
+                    <label class="contact__label" :class="{ 'contact__japanese-text': !isEnglish }" for="message">{{ data.message }}</label>
+                    <textarea class="contact__textarea" :class="{ 'contact__japanese-input': !isEnglish }" name="message" type="text" autocomplete="off" required></textarea>
+                </div>
+                <div class="contact__button-container">
+                    <input class="contact__button" type="submit" :value="data.send">
+                </div>
+            </form>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -57,7 +59,7 @@ export default {
 <style scoped>
 .contact {
     padding: 3.2rem 1.6rem;
-    max-width: 1440px;
+    max-width: calc(1440px - 20rem);
     margin: auto;
 }
 .contact__form-group {
@@ -118,8 +120,21 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-  .contact {
-    padding: 3.2rem 10rem;
-  }
+    .contact {
+        padding: 3.2rem 10rem;
+    }
+
+    .contact__name-email-container {
+        display: flex;
+        gap: 3.2rem;
+    }
+
+    .contact__form-group {
+        flex: 1;
+    }
+
+    .contact__button-container {
+        padding-bottom: 0.8rem;
+    }
 }
 </style>

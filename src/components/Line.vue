@@ -23,10 +23,4 @@ export default {
     width: 30rem;
     margin: 0;
 }
-
-@media screen and (min-width: 768px) {
-    .line__hr {
-        width: 70vw;
-    }
-}
 </style>

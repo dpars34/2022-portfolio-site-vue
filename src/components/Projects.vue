@@ -32,7 +32,7 @@ export default {
 <style scoped>
 .projects {
     padding: 3.2rem 1.6rem;
-    max-width: 1440px;
+    max-width: calc(1440px - 20rem);
     margin: auto;
 }
 
@@ -54,11 +54,11 @@ export default {
 
   .projects__card-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      margin: 3.2rem 0;
   }
 
   .projects__card {
-      flex: 1 1 300px;
       display: flex;
   }
 }
