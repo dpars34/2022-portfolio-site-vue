@@ -1,12 +1,14 @@
 <template>
   <div class="japanese-screen">
       <Navbar :isEnglish="false" @handle-click="handleClick"/>
-      <AboutMe :data="aboutMeData" :isEnglish="false"/>
-      <Line />
-      <Projects :data="projectsData" :isEnglish="false"/>
-      <Line />
-      <Contact :data="contactData" :isEnglish="false"/>
-      <Footer :isEnglish="false"/>
+      <div :class="fadeOut ? 'japanese-screen-fade-out' : 'japanese-screen-content'">
+        <AboutMe :data="aboutMeData" :isEnglish="false"/>
+        <Line />
+        <Projects :data="projectsData" :isEnglish="false"/>
+        <Line />
+        <Contact :data="contactData" :isEnglish="false"/>
+        <Footer :isEnglish="false"/>
+      </div>
   </div>
 </template>
 
@@ -26,11 +28,13 @@ export default {
         return {
             aboutMeData: data.japanese.aboutMe,
             projectsData: data.japanese.projects,
-            contactData: data.japanese.contact
+            contactData: data.japanese.contact,
+            fadeOut: false
         }
     },
     methods: {
         handleClick(isEnglish) {
+            this.fadeOut = true
             this.$emit('handle-click', isEnglish)
         }
     }
@@ -49,6 +53,19 @@ export default {
     }
     to {
         opacity: 1
+    }
+}
+
+.japanese-screen-fade-out {
+    animation: fade-out 0.5s forwards;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
     }
 }
 </style>
