@@ -30,6 +30,7 @@ export default {
 .header {
     display: flex;
     align-items: center;
+    justify-content: start;
 }
 
 .header-text {
@@ -46,5 +47,6 @@ export default {
 
 .header__svg-container {
     height: 5rem;
+    width: 5rem;
 }
 </style>

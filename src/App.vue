@@ -5,6 +5,8 @@
     <ToJapaneseTransition v-if="isTitleScreenShowing && isTransitioning && !isEnglish"/>
     <EnglishScreen v-if="!isTitleScreenShowing && !isTransitioning && isEnglish" @handle-click="handleScreenClick"/>
     <JapaneseScreen v-if="!isTitleScreenShowing && !isTransitioning && !isEnglish" @handle-click="handleScreenClick"/>
+    <EnglishToJapaneseTransition v-if="!isTitleScreenShowing && isTransitioning && !isEnglish"/>
+    <JapaneseToEnglishTransition v-if="!isTitleScreenShowing && isTransitioning && isEnglish"/>
   </div>
 </template>
 
@@ -12,8 +14,10 @@
 import TitleScreen from '@/screens/TitleScreen'
 import EnglishScreen from '@/screens/EnglishScreen'
 import JapaneseScreen from '@/screens/JapaneseScreen'
-import ToEnglishTransition from '@/screens/Transitions/ToEnglishTransition'
-import ToJapaneseTransition from '@/screens/Transitions/ToJapaneseTransition'
+import ToEnglishTransition from '@/screens/transitions/ToEnglishTransition'
+import ToJapaneseTransition from '@/screens/transitions/ToJapaneseTransition'
+import EnglishToJapaneseTransition from '@/screens/transitions/EnglishToJapaneseTransition'
+import JapaneseToEnglishTransition from '@/screens/transitions/JapaneseToEnglishTransition'
 
 export default {
   name: 'App',
@@ -22,7 +26,9 @@ export default {
     EnglishScreen,
     JapaneseScreen,
     ToEnglishTransition,
-    ToJapaneseTransition
+    ToJapaneseTransition,
+    EnglishToJapaneseTransition,
+    JapaneseToEnglishTransition,
   },
   data() {
     return {
@@ -59,7 +65,26 @@ export default {
     },
 
     handleScreenClick(isEnglish) {
-      console.log(isEnglish)
+      if (isEnglish) {
+        setTimeout(() => {
+          this.isTransitioning = true
+          this.isEnglish = false
+        }, 500)
+        setTimeout(() => {
+          document.body.style.background = "#ececec";
+          this.isTransitioning = false
+        }, 1500) 
+        
+      } else {
+        setTimeout(() => {
+          this.isTransitioning = true
+          this.isEnglish = true
+        }, 500)
+        setTimeout(() => {
+          document.body.style.background = "#232323";
+          this.isTransitioning = false
+        }, 1500) 
+      }
     }
   }
 }

@@ -65,6 +65,10 @@ export default {
     align-items: center;
 }
 
+.navbar__triangle-content:hover {
+    cursor: pointer;
+}
+
 .navbar__triangle-text {
     font-size: 1.6rem;
     color: #232323;
@@ -79,6 +83,7 @@ export default {
 
 .navbar__svg-container {
     height: 3rem;
+    width: 3rem;
 }
 
 </style>
