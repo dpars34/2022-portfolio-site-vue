@@ -1,5 +1,6 @@
 <template>
   <div class="english-screen">
+      <Navbar :isEnglish="true" @handle-click="handleClick"/>
       <AboutMe :data="aboutMeData" :isEnglish="true"/>
       <Line />
       <Projects :data="projectsData" :isEnglish="true"/>
@@ -11,6 +12,7 @@
 
 <script>
 import data from '@/data.json'
+import Navbar from '@/components/Navbar'
 import AboutMe from '@/components/AboutMe'
 import Line from '@/components/Line'
 import Projects from '@/components/Projects'
@@ -19,12 +21,17 @@ import Footer from '@/components/Footer'
 
 export default {
     name: 'English Screen',
-    components: { AboutMe, Line, Projects, Contact, Footer },
+    components: { AboutMe, Line, Projects, Contact, Footer, Navbar },
     data() {
         return {
             aboutMeData: data.english.aboutMe,
             projectsData: data.english.projects,
             contactData: data.english.contact
+        }
+    },
+    methods: {
+        handleClick(isEnglish) {
+            this.$emit('handle-click', isEnglish)
         }
     }
 }

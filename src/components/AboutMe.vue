@@ -15,7 +15,7 @@
 <script>
 import Header from "@/components/Header"
 export default {
-    name: "AboutMe",
+    name: 'AboutMe',
     props: {
         data: {
             type: Object,
@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
 .about-me {
-    padding: 3.2rem 1.6rem;
+    padding: 6rem 1.6rem 3.2rem;
     max-width: calc(1440px - 20rem);
     margin: auto;
 }

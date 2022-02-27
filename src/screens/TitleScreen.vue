@@ -6,17 +6,21 @@
         <img class="profile-picture" src="../assets/profile_image.jpeg" alt="Daniel Parsons profile">
         <div class="bottom-area">
             <div class="english-button" @click="handleClickEnglish">
+                <div class="svg-container">
+                    <svg width="100%" height="100%" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M46.2299 22.23L32.4899 36L46.2299 49.77L41.9999 54L23.9999 36L41.9999 18L46.2299 22.23Z" fill="#e1e1e1"/>
+                    </svg>
+                </div>
                 <p class="english-language-label">English</p>
-                <svg style="width:30px;height:30px" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                </svg>
             </div>
             <Button text="Contact" class="contact-button" />
             <div class="japanese-button" @click="handleClickJapanese">
                 <p class="japanese-language-label">日本語</p>
-                <svg style="width:30px;height:30px" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                </svg>
+                <div class="svg-container">
+                    <svg width="100%" height="100%" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.7701 49.77L39.5101 36L25.7701 22.23L30.0001 18L48.0001 36L30.0001 54L25.7701 49.77Z" fill="#232323"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
@@ -37,11 +41,11 @@ export default {
     methods: {
         handleClickEnglish() {
             this.textFadeOut = true
-            this.$emit('handleClick', 'english')
+            this.$emit('handle-click', 'english')
         },
         handleClickJapanese() {
             this.textFadeOut = true
-            this.$emit('handleClick', 'japanese')
+            this.$emit('handle-click', 'japanese')
         }
     }
 }
@@ -52,7 +56,7 @@ export default {
 .title-screen{
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(88deg, #232323 49.8%, #E1E1E1 49.9%);
+    background-image: linear-gradient(88deg, #232323 49.8%, #ececec 49.9%);
     font-family: 'Cabin', sans-serif;
     background-size: 250%;
     background-position: 50% 50%;
@@ -92,12 +96,12 @@ export default {
 }
 
 .daniel-text {
-    color: #FFF;
+    color: #e1e1e1;
     padding-right: 2rem;
 }
 
 .bilingual-text {
-    color: #FFF;
+    color: #e1e1e1;
     padding-right: 2rem;
 }
 
@@ -123,9 +127,8 @@ export default {
 
 .english-button {
     font-size: 3rem;
-    color: #FFFFFF;
+    color: #e1e1e1;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -133,7 +136,6 @@ export default {
     font-size: 3rem;
     color: #232323;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -149,6 +151,10 @@ export default {
 .japanese-language-label {
     margin: 0;
     line-height: 1;
+}
+
+.svg-container {
+    height: 6rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -176,6 +182,10 @@ export default {
 
     .japanese-button {
         font-size: 4rem;
+    }
+
+    .svg-container {
+        height: 7.2rem;
     }
 
 }

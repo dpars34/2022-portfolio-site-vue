@@ -105,7 +105,7 @@ export default {
 .contact__button {
     all: unset;
     padding: 0.1em 1.5em;
-    color: #FFFFFF;
+    color: #e1e1e1;
     background-color: #DB9205;
     border-radius: 10px;
 }

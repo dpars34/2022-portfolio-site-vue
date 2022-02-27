@@ -15,7 +15,7 @@ export default {
 .to-english-transition{
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(88deg, #232323 49.8%, #E1E1E1 49.9%);
+    background-image: linear-gradient(88deg, #232323 49.8%, #ececec 49.9%);
     font-family: 'Cabin', sans-serif;
     background-size: 250%;
     background-position: 50% 50%;

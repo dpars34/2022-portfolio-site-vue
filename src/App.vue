@@ -1,10 +1,10 @@
 <template>
   <div>
-    <TitleScreen v-if="isTitleScreenShowing" @handleClick="handleTitleScreenClick"/>
-    <ToEnglishTransition v-if="!isTitleScreenShowing && isTransitioning && isEnglish"/>
-    <ToJapaneseTransition v-if="!isTitleScreenShowing && isTransitioning && !isEnglish"/>
-    <EnglishScreen v-if="!isTitleScreenShowing && !isTransitioning && isEnglish" />
-    <JapaneseScreen v-if="!isTitleScreenShowing && !isTransitioning && !isEnglish"/>
+    <TitleScreen v-if="isTitleScreenShowing && !isTransitioning" @handle-click="handleTitleScreenClick"/>
+    <ToEnglishTransition v-if="isTitleScreenShowing && isTransitioning && isEnglish"/>
+    <ToJapaneseTransition v-if="isTitleScreenShowing && isTransitioning && !isEnglish"/>
+    <EnglishScreen v-if="!isTitleScreenShowing && !isTransitioning && isEnglish" @handle-click="handleScreenClick"/>
+    <JapaneseScreen v-if="!isTitleScreenShowing && !isTransitioning && !isEnglish" @handle-click="handleScreenClick"/>
   </div>
 </template>
 
@@ -28,32 +28,38 @@ export default {
     return {
       isTitleScreenShowing: true,
       isTransitioning: false,
-      isEnglish: true
+      isEnglish: true,
     }
   },
   methods: {
     handleTitleScreenClick(event) {
       if (event === "english") {
+        document.body.style.background = "#232323";
         setTimeout(() => {
-          this.isTitleScreenShowing = false
           this.isTransitioning = true
           this.isEnglish = true
         }, 500) 
         setTimeout(() => {
           this.isTransitioning = false
+          this.isTitleScreenShowing = false
         }, 1500) 
       } 
       
       if (event === "japanese") {
+        document.body.style.background = "#ececec";
         setTimeout(() => {
-          this.isTitleScreenShowing = false
           this.isTransitioning = true
           this.isEnglish = false
         }, 500) 
         setTimeout(() => {
           this.isTransitioning = false
+          this.isTitleScreenShowing = false
         }, 1500) 
       }
+    },
+
+    handleScreenClick(isEnglish) {
+      console.log(isEnglish)
     }
   }
 }
@@ -62,7 +68,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=M+PLUS+1p&family=Quantico&display=swap');
 
-html {
+body {
   background-color: #232323;
 }
 
