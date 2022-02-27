@@ -132,11 +132,39 @@ export default {
     align-items: center;
 }
 
+.english-button:hover > .svg-container {
+    animation: move-left 0.5s forwards;
+}
+
+@keyframes move-left {
+    from {
+        transform: translate(0)
+    }
+
+    to {
+        transform: translate(-1rem)
+    }
+}
+
 .japanese-button {
     font-size: 3rem;
     color: #232323;
     display: flex;
     align-items: center;
+}
+
+.japanese-button:hover > .svg-container {
+    animation: move-right 0.5s forwards;
+}
+
+@keyframes move-right {
+    from {
+        transform: translate(0)
+    }
+
+    to {
+        transform: translate(1rem)
+    }
 }
 
 .english-button:hover, .japanese-button:hover {

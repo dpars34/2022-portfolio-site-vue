@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
       <div class="navbar__container">
-          <div :class="isEnglish ? 'navbar__triangle' : 'navbar__triangle-japanese'">
+          <div :class="[isEnglish ? 'navbar__triangle' : 'navbar__triangle-japanese', clicked ? 'navbar__triangle-clicked' : '']">
                 <div class="navbar__triangle-content" @click="handleClick">
                     <p v-if="isEnglish" class="navbar__triangle-text">日本語</p>
                     <p v-if="!isEnglish" class="navbar__triangle-text-japanese">English</p>
@@ -22,12 +22,18 @@ export default {
     props: {
         isEnglish: {
             type: Boolean,
-            default: true
+            default: true,
         } 
     },
     methods: {
         handleClick() {
+            this.clicked = true
             this.$emit('handle-click', this.isEnglish)
+        }
+    },
+    data() {
+        return {
+            clicked: false
         }
     }
 }
@@ -45,16 +51,35 @@ export default {
     height: 0;
     width: 0;
     border-style: solid;
-    border-width: 0 13rem 13rem 0;
+    border-width: 0 15rem 12rem 0;
     border-color: transparent #ececec transparent transparent;
+    pointer-events: none;
 }
 
 .navbar__triangle-japanese {
     height: 0;
     width: 0;
     border-style: solid;
-    border-width: 0 14rem 14rem 0;
+    border-width: 0 15rem 12rem 0;
     border-color: transparent #232323 transparent transparent;
+    pointer-events: none;
+}
+
+.navbar__triangle:hover, .navbar__triangle-japanese:hover {
+    animation: zoom-in 0.5s forwards
+}
+
+@keyframes zoom-in {
+    from {
+        border-width: 0 15rem 12rem 0;
+    }
+    to {
+        border-width: 0 16rem 13rem 0;
+    }
+}
+
+.navbar__triangle-clicked {
+    border-width: 0 16rem 13rem 0;
 }
 
 .navbar__triangle-content {
@@ -63,6 +88,7 @@ export default {
     right: 0rem;
     display: flex;
     align-items: center;
+    pointer-events: auto;
 }
 
 .navbar__triangle-content:hover {
