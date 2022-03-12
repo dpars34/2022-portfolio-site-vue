@@ -130,7 +130,7 @@ export default {
 }
 
 .english-button {
-    font-size: 3rem;
+    font-size: 2.4rem;
     color: #e1e1e1;
     display: flex;
     align-items: center;
@@ -151,7 +151,7 @@ export default {
 }
 
 .japanese-button {
-    font-size: 3rem;
+    font-size: 2.4rem;
     color: #232323;
     display: flex;
     align-items: center;
