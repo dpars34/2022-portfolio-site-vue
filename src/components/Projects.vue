@@ -61,5 +61,19 @@ export default {
   .projects__card {
       display: flex;
   }
+
+   .projects__card:hover {
+     animation: zoom-in 0.5s forwards;
+ }
+
 }
+
+ @keyframes zoom-in {
+     from {
+        transform: scale(1)
+     }
+     to {
+        transform: scale(1.05)
+     }
+ }
 </style>

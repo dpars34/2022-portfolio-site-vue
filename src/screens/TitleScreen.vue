@@ -13,7 +13,7 @@
                 </div>
                 <p class="english-language-label">English</p>
             </div>
-            <Button text="Contact" class="contact-button" @click="handleClickContact"/>
+            <!-- <Button text="Contact" class="contact-button" @click="handleClickContact"/> -->
             <div class="japanese-button" @click="handleClickJapanese">
                 <p class="japanese-language-label">日本語</p>
                 <div class="svg-container">
@@ -28,11 +28,11 @@
 </template>
 
 <script>
-import Button from '@/components/Button'
+// import Button from '@/components/Button'
 
 export default {
     name: "TitleScreen",
-    components: { Button },
+    // components: { Button },
     data() {
         return {
             textFadeOut: false

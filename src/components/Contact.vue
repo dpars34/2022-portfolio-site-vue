@@ -46,12 +46,20 @@ export default {
             emailjs.sendForm("service_oecmsbq", "template_bjgamid", this.$refs.form, "user_9EtEh0xOJ964JtXdN23UQ")
             .then((result) => {
                 console.log(result.text)
-                alert("Message sent successfully!")
+                alert(this.isEnglish ? "Message sent successfully!" : "メッセージが送信されました。")
+
+                const inputs = document.getElementsByClassName('contact__input')
+                for (let i = 0; i < inputs.length; i++) {
+                    inputs[i].value = ''
+                }
+                const textArea = document.getElementsByClassName('contact__textarea')
+                textArea[0].value = ''
+
             }, (error) => {
                 console.log(error.text)
-                alert("Message could not be sent! "+error);
+                alert(this.isEnglish ? "Message could not be sent! " : "メッセージが送信されませんでした。 ");
             })
-        }
+        },
     }
 }
 </script>
@@ -105,7 +113,7 @@ export default {
 .contact__button {
     all: unset;
     padding: 0.1em 1.5em;
-    color: #e1e1e1;
+    color: #F9F9F9;
     background-color: #DB9205;
     border-radius: 10px;
 }
@@ -117,6 +125,7 @@ export default {
 .contact__japanese-input {
     background-color: #F9F9F9;
     border: solid 0.1rem #e1e1e1;
+    color: #232323;
 }
 
 @media screen and (min-width: 768px) {
@@ -136,5 +145,19 @@ export default {
     .contact__button-container {
         padding-bottom: 0.8rem;
     }
+
+    .contact__button:hover {
+        animation: zoom-in 0.5s forwards;
+        cursor: pointer;
+    }
 }
+
+ @keyframes zoom-in {
+     from {
+        transform: scale(1)
+     }
+     to {
+        transform: scale(1.05)
+     }
+ }
 </style>
