@@ -13,7 +13,7 @@
                 </div>
                 <p class="english-language-label">English</p>
             </div>
-            <Button text="Contact" class="contact-button" />
+            <Button text="Contact" class="contact-button" @click="handleClickContact"/>
             <div class="japanese-button" @click="handleClickJapanese">
                 <p class="japanese-language-label">日本語</p>
                 <div class="svg-container">
@@ -46,6 +46,10 @@ export default {
         handleClickJapanese() {
             this.textFadeOut = true
             this.$emit('handle-click', 'japanese')
+        },
+        handleClickContact() {
+            this.textFadeOut = true
+            this.$emit('handle-click', 'contact')
         }
     }
 }
@@ -190,6 +194,20 @@ export default {
         display: block;
         margin: 3rem;
         font-size: 4rem;
+    }
+
+    .contact-button:hover {
+        animation: zoom-in 0.5s forwards;
+    }
+
+    @keyframes zoom-in {
+        from {
+            transform: scale(1)
+        }
+
+        to {
+            transform: scale(1.1)
+        }
     }
 
     .name-title {

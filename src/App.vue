@@ -62,6 +62,18 @@ export default {
           this.isTitleScreenShowing = false
         }, 1500) 
       }
+
+      if (event === "contact") {
+        document.body.style.background = "#232323";
+        setTimeout(() => {
+          this.isTransitioning = true
+          this.isEnglish = true
+        }, 500) 
+        setTimeout(() => {
+          this.isTransitioning = false
+          this.isTitleScreenShowing = false
+        }, 1500)
+      } 
     },
 
     handleScreenClick(isEnglish) {
@@ -74,7 +86,7 @@ export default {
           document.body.style.background = "#ececec";
           this.isTransitioning = false
         }, 1500) 
-        
+
       } else {
         setTimeout(() => {
           this.isTransitioning = true

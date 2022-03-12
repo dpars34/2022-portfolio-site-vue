@@ -35,7 +35,7 @@ export default {
 
 @keyframes grow {
     from {
-        height: 0px;
+        height: 0;
         border-width: 0 13rem 13rem 0;
     }
     to {

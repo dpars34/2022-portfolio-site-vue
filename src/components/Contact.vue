@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div id="contact" class="contact">
       <Header :text="data.title" :isEnglish="isEnglish"/>
       <div class="contact__form-container">
           <form ref="form" @submit.prevent="sendEmail">
