@@ -14,10 +14,10 @@
 import TitleScreen from '@/screens/TitleScreen'
 import EnglishScreen from '@/screens/EnglishScreen'
 import JapaneseScreen from '@/screens/JapaneseScreen'
-import ToEnglishTransition from '@/screens/transitions/ToEnglishTransition'
-import ToJapaneseTransition from '@/screens/transitions/ToJapaneseTransition'
-import EnglishToJapaneseTransition from '@/screens/transitions/EnglishToJapaneseTransition'
-import JapaneseToEnglishTransition from '@/screens/transitions/JapaneseToEnglishTransition'
+import ToEnglishTransition from './screens/transitions/ToEnglishTransition'
+import ToJapaneseTransition from './screens/transitions/ToJapaneseTransition'
+import EnglishToJapaneseTransition from './screens/transitions/EnglishToJapaneseTransition'
+import JapaneseToEnglishTransition from './screens/transitions/JapaneseToEnglishTransition'
 
 export default {
   name: 'App',
