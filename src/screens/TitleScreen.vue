@@ -130,7 +130,7 @@ export default {
 }
 
 .english-button {
-    font-size: 2.4rem;
+    font-size: 3rem;
     color: #e1e1e1;
     display: flex;
     align-items: center;
@@ -151,7 +151,7 @@ export default {
 }
 
 .japanese-button {
-    font-size: 2.4rem;
+    font-size: 3rem;
     color: #232323;
     display: flex;
     align-items: center;
@@ -187,6 +187,7 @@ export default {
 
 .svg-container {
     height: 6rem;
+    width: 6rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -232,6 +233,7 @@ export default {
 
     .svg-container {
         height: 7.2rem;
+        width: 7.2rem;
     }
 
 }
