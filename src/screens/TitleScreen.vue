@@ -58,17 +58,20 @@ export default {
 <style scoped>
 
 .title-screen{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-image: linear-gradient(88deg, #232323 49.8%, #ececec 49.9%);
     font-family: 'Cabin', sans-serif;
     background-size: 250%;
     background-position: 50% 50%;
+    display: flex;
+    align-items: center;
 }
 
 .flex-container{
     height: 100%;
     width: 100%;
+    padding: 3rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
