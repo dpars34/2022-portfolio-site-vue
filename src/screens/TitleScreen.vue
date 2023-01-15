@@ -223,7 +223,7 @@ export default {
     }   
 
     .profile-picture {
-        height: 35rem;
+        height: 25rem;
     }
 
     .english-button {
