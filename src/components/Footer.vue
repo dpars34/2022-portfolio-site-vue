@@ -19,7 +19,7 @@
                 </a> -->
             </div>
             <div class="footer__text-container">
-                © Daniel Parsons 2022
+                © Daniel Parsons 2023
             </div>
         </div>
   </div>
