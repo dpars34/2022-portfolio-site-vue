@@ -29,7 +29,7 @@
 
                 {
                     "name": "9 Borden Coffee - Coffee Shop Website",
-                    "image": "https://i.postimg.cc/tTcvfStm/9borden-screengrab.jpg",
+                    "image": "https://i.postimg.cc/brgrf0ZL/Screenshot-2023-10-16-at-22-28-50.png",
                     "imageAlt": "9 borden coffee homepage",
                     "text": "A website created for 9 Borden Coffee, a coffee shop located in Osaka, Japan.",
                     "date": "June 2021",
@@ -37,12 +37,12 @@
                 },
 
                 {
-                    "name": "Navi Jisho - The easy to navigate Japanese dictionary",
-                    "image": "https://i.postimg.cc/V5QGsJhq/navijisho-screengrab.jpg",
-                    "imageAlt": "Navi jisho dictionary homepage",
-                    "text": "Navi Jisho is the easy to navigate Japanese dictionary, inspired by the layout and design of the Tokyo and Osaka metro systems.",
-                    "date": "November 2021",
-                    "link": "https://www.navijisho.org/"
+                    "name": "Parrot - The Japanese Accent Dictionary",
+                    "image": "https://i.postimg.cc/K4SL480H/Group-11.png",
+                    "imageAlt": "Parrot app link",
+                    "text": "Parrot is a Japanese accent dictionary that anybody can contribute to! Available on the Apple AppStore.",
+                    "date": "September 2023",
+                    "link": "https://apps.apple.com/jp/app/%E3%83%91%E3%83%AD%E3%83%83%E3%83%88-%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E6%96%B9%E8%A8%80%E8%BE%9E%E5%85%B8/id6462151090?l=en-US"
                 }
             ]
         },
@@ -84,7 +84,7 @@
 
                 {
                     "name": "9 Borden Coffee - ホームページ",
-                    "image": "https://i.postimg.cc/tTcvfStm/9borden-screengrab.jpg",
+                    "image": "https://i.postimg.cc/brgrf0ZL/Screenshot-2023-10-16-at-22-28-50.png",
                     "imageAlt": "9bordenホームページ",
                     "text": "大阪にあるカフェ、9 Borden Borden Coffeeのホームページです。",
                     "date": "2021年6月",
@@ -92,12 +92,12 @@
                 },
 
                 {
-                    "name": "Navi Jisho - 簡単にナビゲートできる日本語辞典",
-                    "image": "https://i.postimg.cc/V5QGsJhq/navijisho-screengrab.jpg",
-                    "imageAlt": "Navi jishoホームページ",
-                    "text": "東京と大阪の地下鉄からインスピレーションをとったNavi Jisho - 誰でも簡単にビゲートできる日本語辞典。",
-                    "date": "2021年11月",
-                    "link": "https://www.navijisho.org/"
+                    "name": "パロット：みんなの方言辞典",
+                    "image": "https://i.postimg.cc/K4SL480H/Group-11.png",
+                    "imageAlt": "Parrot app link",
+                    "text": "日本の方言をもっと深く知りたいと思ったことありませんか？ パロットアプリはだれでも投稿できる方言辞典！ AppStoreからダウンロード！",
+                    "date": "2023年9月",
+                    "link": "https://apps.apple.com/jp/app/%E3%83%91%E3%83%AD%E3%83%83%E3%83%88-%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E6%96%B9%E8%A8%80%E8%BE%9E%E5%85%B8/id6462151090?l=en-US"
                 }
             ]
         },

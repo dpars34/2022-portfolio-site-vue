@@ -53,6 +53,7 @@ export default {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    aspect-ratio: 16/9;
 }
 
 .card__text {

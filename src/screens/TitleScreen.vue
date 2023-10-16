@@ -117,6 +117,7 @@ export default {
     margin-top: 5rem;
     border-radius: 50%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    filter: grayscale(100%);
 }
 
 .bottom-area {
